@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meme the Dream</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .meme-image {
+    width: 500px;
+    height: 250px;
+    object-fit: cover; 
+    display: block;
+    margin: 0 auto;
+    
+    }
+    .meme-button {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .meme-button:hover {
+    background-color: #e84118;
+    transform: scale(1.05);
+  }
+
+  .meme-button:active {
+    transform: scale(0.98);
+  }
+    video, canvas {
+      display: block;
+      margin: 10px auto;
+      border: 1px solid #ccc;
+    }
+    
+    #similarityScore {
+      text-align: center;
+      font-size: 1.2em;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    
+  </style>
+</head>
+<body>
+  <button id="mute-toggle">🔊</button>
+
+  <div id="screen-0" class="screen active">
+    <img class="next-arrow" src="next_arrow.png" alt="Next" />
+    <div id="typing-text-container">
+      <p id="typing-text"></p>
+    </div>
+  </div>
+
+  <div id="screen-1" class="screen">
+    <img class="back-arrow" src="back_arrow.png" alt="Back" />
+    <img class="next-arrow" src="next_arrow.png" alt="Next" />
+
+    <div id="typing-text-container">
+      <p id="typing-text1"></p>
+    </div>
+  </div>
+
+  <div id="screen-2" class="screen">
+    <img class="back-arrow" src="back_arrow.png" alt="Back" />
+    <img class="next-arrow" src="next_arrow.png" alt="Next" />
+
+    <div id="typing-text-container1">
+      <p id="typing-text2"></p>
+    </div>
+  </div>
+
+  <div id="screen-3" class="screen">
+    <img class="back-arrow" src="back_arrow.png" alt="Back" />
+    <img class="next-arrow" src="next_arrow.png" alt="Next" />
+
+    <div id="typing-text-container2">
+      <p id="typing-text3"></p>
+    </div>
+  </div>
+
+  <div id="screen-4" class="screen">
+    <img class="back-arrow" src="back_arrow.png" alt="Back" />
+    <img class="next-arrow" src="next_arrow.png" alt="Next" />
+
+    <div id="typing-text-container3">
+      <p id="typing-text4"></p>
+    </div>
+  </div>
+
+  <div id="screen-5" class="screen">
+    <img class="back-arrow" src="back_arrow.png" alt="Back" />
+    <img class="next-arrow" src="next_arrow.png" alt="Next" />
+
+    <div id="typing-text-container3">
+      <p id="typing-text5"></p>
+    </div>
+
+  </div>
+
+  <div id="screen-6" class="screen">
+    <img class="progress_bar" src="100.png" alt="progress" />
+
+    <div class="rectangle-container">
+      <div class="rectangle">
+        <img id="easy-meme" class="meme-image" alt="Easy meme" />
+        <p id="easy-meme-caption" class="caption"></p>
+      </div>
+      <div class="rectangle" id="webcam-rectangle">
+        <video id="webcam" autoplay playsinline width="500" height="250" style="transform: scaleX(-1); margin-top: -3px;"></video>
+        <button id="captureBtn" class="meme-button" style="display: block; margin: 10px auto;">Meme It</button>
+        <canvas id="canvas" width="500" height="250" style="display:none;"></canvas>
+        <div id="similarityScore" style="text-align:center; font-weight:bold; margin-top: 10px;"></div>
+      </div>
+    </div>
+    <img class="back-arrow" src="back_arrow.png" alt="Back" />
+    <img class="next-arrow" src="next_arrow.png" alt="Next" style="display: none;"/>
+  </div>
+
+  <div id="screen-7" class="screen">
+    <img class="progress_bar" src="75.png" alt="progress" />
+    <div class="rectangle-container">
+      <div class="rectangle">
+        <img id="medium-meme" class="meme-image" alt="Medium meme" />
+        <p id="medium-meme-caption" class="caption"></p>
+      </div>
+      <div class="rectangle" id="webcam-rectangle-7">
+        <video id="webcam-7" autoplay playsinline width="500" height="250" style="transform: scaleX(-1); margin-top: -3px;"></video>
+        <button id="captureBtn-7" class="meme-button" style="display: block; margin: 10px auto;">Meme It</button>
+        <canvas id="canvas-7" width="500" height="250" style="display:none;"></canvas>
+        <div id="similarityScore-7" style="text-align:center; font-weight:bold; margin-top: 10px;"></div>
+      </div>
+    </div>
+    <img class="back-arrow" src="back_arrow.png" alt="Back" />
+    <img class="next-arrow" src="next_arrow.png" alt="Next" style="display: none;"/>
+  </div>
+
+  <div id="screen-8" class="screen">
+    <img class="progress_bar" src="50.png" alt="progress" />
+    <div class="rectangle-container">
+      <div class="rectangle">
+        <img id="hard-meme" class="meme-image" alt="Hard meme" />
+        <p id="hard-meme-caption" class="caption"></p>
+      </div>
+      <div class="rectangle" id="webcam-rectangle-8">
+        <video id="webcam-8" autoplay playsinline width="500" height="250" style="transform: scaleX(-1); margin-top: -3px;"></video>
+        <button id="captureBtn-8" class="meme-button" style="display: block; margin: 10px auto;">Meme It</button>
+        <canvas id="canvas-8" width="500" height="250" style="display:none;"></canvas>
+        <div id="similarityScore-8" style="text-align:center; font-weight:bold; margin-top: 10px;"></div>
+      </div>
+    </div>
+    <img class="back-arrow" src="back_arrow.png" alt="Back" />
+    <img class="next-arrow" src="next_arrow.png" alt="Next" style="display: none;"/>
+  </div>
+
+  <div id="screen-9" class="screen">
+    <img class="progress_bar" src="25.png" alt="progress" />
+    <div class="rectangle-container">
+      <div class="rectangle">
+        <img id="sigma-meme" class="meme-image" src="memes/sigma.jpg" alt="Sigma meme" />
+        <p id="easy-caption" class="meme-caption"></p>
+      </div>
+      <div class="rectangle" id="webcam-rectangle-9">
+        <video id="webcam-9" autoplay playsinline width="500" height="250" style="transform: scaleX(-1); margin-top: -3px;"></video>
+        <button id="captureBtn-9" class="meme-button"style="display: block; margin: 10px auto;">Meme It</button>
+        <canvas id="canvas-9" width="500" height="250" style="display:none;"></canvas>
+        <div id="similarityScore-9" style="text-align:center; font-weight:bold; margin-top: 10px;"></div>
+      </div>
+    </div>
+    <img class="back-arrow" src="back_arrow.png" alt="Back" />
+    <img class="next-arrow" src="next_arrow.png" alt="Next" />
+  </div>
+
+  <div id="screen-10" class="screen">
+    <img class="back-arrow" src="back_arrow.png" alt="Back" />
+    <img class="muffin" src="special_muffin.png" alt="muffin" />
+    <div id="muffin-message-box">
+    <p id="muffin-message" style=" margin-top: 20px;">
+      You have summoned the sacred muffin. Let the freedom and party begin 🎉 </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

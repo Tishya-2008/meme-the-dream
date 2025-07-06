@@ -1,0 +1,298 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.screen {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.screen.active {
+  display: block;
+}
+
+#screen-0 {
+  background-image: url('titlescreen.jpg');
+  background-size: contain; /* Shows entire image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black; /* Optional: fills empty space */
+}
+
+
+#screen-1 {
+  background-image: url('raccoon_outside_tims.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#screen-2 {
+  background-image: url('scary_raccoon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+#screen-3 {
+  background-image: url('cute_raccoon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#screen-4 {
+  background-image: url('jojo_raccoon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#screen-5 {
+  background-image: url('kyle.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.next-arrow {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  z-index:10;
+}
+
+.back-arrow {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 60px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  z-index: 10;
+}
+
+.next-arrow:hover,
+.back-arrow:hover {
+  transform: scale(1.5);
+  z-index: 10;
+}
+
+.rectangle-container {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 50vw;       
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-right: 20px;   
+  box-sizing: border-box;
+  height: auto;          
+  min-height: 100vh;  
+  margin-top: -35px;   
+}
+
+.rectangle {
+  width: 500px;
+  height: 250px;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: white;
+  margin-bottom: -10px;
+}
+
+.progress_bar {
+  position: absolute;
+  width: 10vw;
+  margin-left:290px;
+  margin-top: 160px;
+  height: auto;
+}
+
+#typing-text-container,
+#typing-text-container1,
+#typing-text-container2,
+#typing-text-container3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  padding: 15px 0;
+  text-align: center;
+}
+
+#typing-text,
+#typing-text1,
+#typing-text2,
+#typing-text3,
+#typing-text4,
+#typing-text5 {
+  color: white;
+  font-size: 1.2em;
+  font-family: monospace, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  width: fit-content;
+  margin: 0 auto;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
+}
+
+#screen-6 {
+  background-image: url('raccoon100.jpg');
+  background-repeat: no-repeat;
+  background-position: -150px center; 
+  background-size: auto 100%;
+  background-color: #0b040A;
+}
+
+#screen-7 {
+  background-image: url('raccoon75.jpg');
+  background-repeat: no-repeat;
+  background-position: -150px center; 
+  background-size: auto 100%;
+  background-color: #0b040A;
+}
+
+#screen-8 {
+  background-image: url('raccoon50.jpg');
+  background-repeat: no-repeat;
+  background-position: -150px center; 
+  background-size: auto 100%;
+  background-color: #0b040A;
+}
+
+#screen-9 {
+  background-image: url('raccoon25.jpg');
+  background-repeat: no-repeat;
+  background-position: -150px center; 
+  background-size: auto 100%;
+  background-color: #0b040A;
+}
+
+#screen-10 {
+  background-image: url('golden_muffin.jpg');
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: auto 100%;
+  background-color: #0b040A;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.muffin{
+  margin-left:740px;
+  margin-top: 60px;
+  width:40%;
+}
+
+#muffin-message-box {
+  display: none;
+  position: relative;
+  background: rgba(68, 68, 68, 0.8); 
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+#muffin-message {
+  position: relative;
+  color: white;
+  font-family: monospace;
+  font-size: 24px;
+  z-index: 100; 
+}
+
+
+.meme-button {
+  display: block;
+  margin: 20px auto;
+  padding: 8px 15px;
+  background: linear-gradient(145deg, #81A8FE, #3312FF);
+  color: #fff;
+  font-family: monospace;
+  font-size: 14px;
+  border: 2px solid rgb(214, 247, 247);
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #81A8FE, 0 0 10px #3312FF;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.meme-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #94c5f5, 0 0 12px #3f87ff;
+}
+
+.meme-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 15px rgb(157, 216, 248) inset;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rectangle {
+  position: relative; 
+  width: 500px;       
+  height: 250px;     
+}
+
+.caption {
+  font-family:monospace;
+  position: absolute;
+  bottom: 10px;           
+  width: 100%;            
+  text-align: center;     
+  color: white;           
+  font-weight: bold;
+  font-size: 12px;
+  margin: 0;              
+  pointer-events: none; 
+  background-color: rgba(35, 43, 191, 0.6); 
+}
+
+#mute-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+  background: black;
+  color: white;
+  border: none;
+  font-size: 24px;
+}
