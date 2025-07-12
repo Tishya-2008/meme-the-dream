@@ -1,6 +1,6 @@
 # MEME THE DREAM
 ## What your project is/does (and what it's called)
-Meme the Dream is a browser game that turns boredom while waiting in line into a fun, active challenge by having players match meme poses using their webcam. You play as Kyle, a high schooler battling raccoons with perfectly timed meme poses across three levels of increasing difficulty.
+Meme the Dream is a browser game that turns boredom while waiting in line into a fun, active challenge. Players match meme poses using their webcam. You play as Kyle, a high schooler battling raccoons with perfectly timed meme poses across three levels of increasing difficulty.
 
 ## Why you made your project
 We made it during the JPEG hackathon in July 2025. We tested our creativity, coding and art skills! It was lots of fun and tried to make coding rewarding for all.
