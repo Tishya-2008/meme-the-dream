@@ -20,4 +20,6 @@ Languages:
 ## What you struggled with and what you learned
 We struggled with integrating flask API to connect our front end and backend. Due to the 24 hour time deadline it was difficult to finish everything in time but with a solid plan we learned how to complete it!
 
+## Play it now:
+https://meme-the-dream.onrender.com/
 [![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
